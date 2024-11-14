@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trading Bot Interface</title>
+    <link rel="shortcut icon" href="../static/img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Trading Bot Interface</h1>
+        <div id="auth-section">
+            <h2>Autenticação</h2>
+            <input type="text" id="api-key" placeholder="API Key">
+            <input type="password" id="secret-key" placeholder="Secret Key">
+            <button onclick="authenticate()">Autenticar</button>
+            <p id="auth-status"></p>
+        </div>
+        <div id="bot-section" style="display: none;">
+            <h2>Ações do Bot</h2>
+            <button onclick="plotPriceData()">Gerar Gráfico</button>
+            <button onclick="predictPrice()">Prever Preço</button>
+            <p id="result"></p>
+            <img id="chart" alt="Gráfico de Preços">
+            <button onclick="logout()">Logout</button>
+        </div>
+    </div>
+    <script src="../static/js/script.js"></script>
+</body>
+
+</html>
